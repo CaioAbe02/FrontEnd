@@ -1,0 +1,193 @@
+-= No HTML =-
+
+<p style="color: red;"> TEXTO </p> -> Esse parágrafo fica vermelho
+<style>
+    p{
+        color: red;                -> Todos os parágrafos ficam vermelho
+    }
+</style>
+	
+<a href="#ID/.CLASSE"> TEXTO </a> -> Cria um hiperlink para a tag com o ID/CLASSE
+
+<style>
+    @font-face {            -> Fontes baixadas
+        font-family: NOME;
+        scr: url(ENDEREÇO);
+    }
+</style>
+
+-= Arquivo .css =-
+
+<link href="ARQUIVO .CSS" rel="stylesheet"> -> style
+
+TAG{				                            -> Modifica todos os elementos com a TAG
+    color: red; 		                        -> Cor da letra    
+}
+
+#ID{            -> Pode-se utilizar em 1 tag
+    color: red; -> A tag que tiver id="ID" no .html fica vermelho
+}
+
+.CLASSE{        -> Pode-se utilizar em mais de 1 tag
+    color: red; -> As tags que tiveres class="CLASSE" no .html ficam vermelho
+}
+
+# Uma tag pode ter mais de uma ID / CLASS -> <p id="ID ID"> TEXTO </p> 
+
+>> BACKGROUND <<
+
+    background-color: red;	                    -> Cor do fundo
+    background-image: url(ENDEREÇO DA IMAGEM);  -> Imagem do fundo
+    background-repeat: COMANDO;                 -> Define se a imagem do fundo repete, só repete no x ou no y ou não repete
+    background-size: TAMANHO;                   -> Define o tamanho do fundo
+    background-attachment: COMANDO;             -> Define se o fundo vai acompanhar o scroll ou não
+    background-position: POSIÇÃO;               -> Define a posição do fundo
+
+    background: red url(ENDEREÇO) no-repeat cover
+
+>> MARGIN / PADDING <<
+
+    margin: TAMANHO  -> Adiciona um espaço entre ele e outros elementos
+    padding: TAMANHO -> Adiciona um espaço entre ele mesmo
+
+>> BORDER / OUTLINE<<
+
+    border-color: COR;                   -> Define a cor da borda
+    border-width: TAMANHO;               -> Define o tamanho da borda
+    border-style: ESTILO;                -> Define o estilo da borda
+    border-radius: TAMANHO;              -> Define o arredondamento da borda
+
+    border-top-color: red;               -> Apenas a parte de cima da borda fica vermelha
+    border-color: red blue green yellow; -> top: red / right: blue / bottom: green / left: yellow
+
+    outline: COMANDO;                    -> Não altera o Box Model
+
+    width: 100px;
+    height: 100px;
+    border: 10px solid red;
+    box-sizing = border-box;             -> Tamanho do quadrado = 100px, ao invés de 120px por causa da borda
+
+>> TEXT <<
+
+    color: COR;                               -> Muda a cor do texto
+    text-align: POSIÇÃO;                      -> Define a posição do texto
+    text-transform: COMANDO;                  -> Transforma o texto (tudo maiúsculo ou minúsculo, ...)
+    text-ident: TAMANHO;                      -> Define o tamanho do espaço da primeira linha
+    text-decoration: COMANDO;                 -> Sublinhado, riscado, ...
+    text-shadow: TAMANHO TAMANHO TAMANHO COR; -> Aplica uma sombra (direita / baixo / raio de desfoque / cor da sombra)
+    letter-spacing: TAMANHO;                  -> Define o espaço entre cada letra
+    line-height: TAMANHO;                     -> Define o espaço entre cada linha
+    word-spacing: TAMANHO;                    -> Define o espaço entre cada palavra
+
+>> FONT <<
+
+    font-family: Arial, "Comic Sans MS", sans-serif; -> Caso o usuário não possua a Arial no pc, a próxima fonte irá ser utilizada
+    font-style: ESTILO;                              -> Itálico, normal, ...
+    font-size: TAMANHO;                              -> Define o tamanho da fonte
+    font-weight: NÚMERO;                             -> Negrito (0 - 900)
+    font-variant: small-caps;                        -> Transforma todas as letras minúsculas em maiúscula, porém o tamanho das minúsculas ainda será menor
+
+    @font-face {                                     -> Fontes baixadas
+        font-family: NOME;
+        scr: url(ENDEREÇO);
+    }
+
+
+>> LINKS <<
+
+    .links {                -> Altera todos os estados
+        color: COR;
+    }
+
+    .links:visited {        -> Altera os links que já foram visitados
+        color: COR;
+    }
+    .links: hover {         -> Altera os links quando o mouse está por cima
+        background: COR; 
+    }
+    .links: active {        -> Altera os links ao clicar com o mouse
+        background: COR; 
+    }
+
+>> LIST <<
+
+    list-style-type: ESTILO;           -> Altera o estilo do marcador
+    list-style-image: url("ENDEREÇO"); -> Altera o estilo do marcador 
+    list-style-position: POSIÇÃO;      -> Altera a posição do marcador
+
+>> OVERFLOW <<
+
+    overflow: visible -> Mostra o conteúdo vazado
+    overflow: hidden -> Esconde o conteúdo vazado
+    overflow: scroll -> Acrescenta um scroll
+    overflow: auto -> Acrescenta, caso necessário, um scroll ou aumenta de tamanho, caso seja uma imagem
+
+>> DISPLAY <<
+
+    display: block        -> Ocupa a linha inteira. O próximo elemento ficará na próxima linha.
+    display: inline       -> Ocupa apenas o seu tamanho determinado. O próximo elemento ficará ao seu lado.
+    display: inline-block -> Igual ao inline, porém pode sofrer alteração de tamanho.
+
+>> ALINHAMENTO HORIZONTAL <<
+
+    >> DIV <<
+
+        margin: auto;                               -> Centralizado
+        margin-left: auto;                          -> Direita
+
+    >> IMAGEM <<
+
+        display: block;
+        margin: auto;                               -> Centralizado
+
+        display: inline-block;
+        Colocar a <img></img> dentro de uma div
+        margin: auto;                               -> Centralizado
+
+>> ALINHAMENTO VERTICAL <<
+
+    line-height: NÚMERO;              -> Metade da altura, caso queira Centralizado
+
+    position: absolute;
+    top: 50%;                         -> Centralizado horizontalmente e verticalmente
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+>> POSITION <<
+
+    position: static;   -> Padrão
+    position: relative; -> É possível mudar sua posição utilizando:
+        top: NÚMERO;
+        right: NÚMERO;  -> Alteram a posição sem "empurrar" outros elementos, assim como o "margin" faz
+        bottom: NÚMERO; -> Sua posição é em relação à sua posição inicial
+        left: NÚMERO;
+    position: absolute; -> É possível mudar sua posição utilizando:
+        top: NÚMERO;
+        right: NÚMERO;  -> Alteram a posição sem "empurrar" outros elementos, assim como o "margin" faz
+        bottom: NÚMERO; -> Sua posição é em relação à posição do primeiro elemento acima dele com position: !static
+        left: NÚMERO;
+    position: fixed;    -> É possível mudar sua posição utilizando:
+        top: NÚMERO;
+        right: NÚMERO;  -> Alteram a posição sem "empurrar" outros elementos, assim como o "margin" faz
+        bottom: NÚMERO; -> Sua posição é fixa em relação à tela.
+        left: NÚMERO;
+    position: sticky;   -> É possível mudar sua posição utilizando:
+        top: NÚMERO;
+        right: NÚMERO;  -> Alteram a posição sem "empurrar" outros elementos, assim como o "margin" faz
+        bottom: NÚMERO; -> O elemento não vai sair da tela, vai grudar no lado determinado
+        left: NÚMERO;
+
+>> FLOAT / CLEAR <<
+
+    float: right; -> Utilizado para posicionar objetos na direção desejada
+    float: left; 
+
+    clear: right; -> Utilizado para impedir que objetos float fiquem do lado indesejado
+    clear: left;
+    clear: both;
+
+>> MEDIA QUERIES <<
+
+    @media screen and (max-width: NÚMERO) { -> Quando a tela estiver menor que 400px
+    
+    }

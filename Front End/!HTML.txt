@@ -1,0 +1,116 @@
+<!DOCTYPE html> -> Declara que o site está usando HTML 5
+<html lang="pt">
+	<head>
+		<title>TÍTULO</title>
+		<meta charset="utf-8"> 												   -> Codificação da página
+		<meta name="viewport" content="width=device-width, inicial-scale=1.0"> -> Deixa a página responsiva
+	<\head>
+
+	<body>
+
+	<!--COMENTÁRIO-->
+	<br>   			  	-> Quebra linha
+	<div></div> 	  	-> Cria um grupo
+	<header></header> 	-> Cabeçalho = <div>
+	<nav></nav>		  	-> Menu = lista
+	<main></main>	  	-> Conteúdo principal = <div>
+	<section></section> -> Seção
+	<article></article> -> Artigo
+	<footer></footer> 	-> Rodapé = <div>
+
+<< TÍTULOS >>
+
+	<h1>TÍTULO 1</h1>
+	<h2>SUBTÍTULO</h2> -> Até h6
+
+<< PARÁGRAFO >>
+
+	<p> PARÁGRAFO </p>
+	<p><b> NEGRITO </b></p> 		-> <strong></strong> também deixa o texto em NEGRITO,
+							 		porém sinaliza para mecanismos de busca que aquele texto é importante
+	<p><i> ITÁLICO </i></p> 		-> <em></em> 
+	<p><mark> MARCAÇÃO </mark></p>
+	<p><small> PEQUENO </small></p>
+	<p><s> RISCADO </s></p> 		-> <del></del>
+	<p><u> SUBLINHADO </u></p> 		-> <ins></ins>
+	<p><sub> SUBSCRIPT </sub></p>
+	<p><sup> SUPERSCRIPT </sup></p>
+
+<< HIPERLINK >>
+
+	<a href="ENDEREÇO DO ARQUIVO HTML">TEXTO</a> -> Cria um hiperlink
+
+<< IMAGEM >>
+
+	<img scr="ENDEREÇO DA IMAGEM" alt="DESCRIÇÃO" width=NÚMERO height=NÚMERO> -> alt="TEXTO" procura uma imagem de acordo com o TEXTO
+																 				 caso a imagem original não apareça
+	<a href="ENDEREÇO DA IMAGEM"><img scr="ENDEREÇO DA IMAGEM></a> 			  -> A imagem vira um hiperlink
+
+<< LISTA >>
+	
+	<ul> 					-> Lista 
+		<li> ITEM 1 </li>
+		<li> ITEM 2 </li>
+	</ul>
+
+	<ol> 					-> Lista numérica
+		<li> ITEM 1 </li>
+		<li> ITEM 2 </li>
+	</ol>
+
+<< TABELA >>
+
+	<table> -> Tabela
+		<tr>
+			<th> Nome </th> 				-> Cabeçalho
+			<th> Data de Nascimento </th>
+		</tr>
+		<tr>
+			<td> João </td> 				-> Dados
+			<td> 05/09/1998
+		</tr>
+		<tr>
+			<td> Maria </td>
+			<td> 23/11/2000
+		</tr>
+	</table>
+
+<< FORMULÁRIO >>
+
+	<form method="MÉTODO" action="ENDEREÇO WEB">
+		
+		<input type="texto" name="NOME"> 				  		  -> Cria umá área para escrever um texto
+		<input type="password" name="NOME"> 			  		  -> Cria uma área para escrever uma senha
+		<input type="checkbox" name="NOME" value="VALOR" checked> -> Cria uma checkbox
+		<input type="radio" name="NOME" value="VALOR"> 	  		  -> Cria uma opção para marcar
+		<input type="color" name="NOME">						  -> Cria uma opção de cores para marcar
+		<input type="data" name="NOME" min="DATA" max="DATA">	  -> Cria uma opção de data para marcar
+		<input type="datetime-local" name="NOME">	  			  -> Cria uma opção de data e hora para marcar
+		<input type="file" name="NOME">							  -> Cria uma opção de arquivo para mandar
+		<input type="number" name="NOME" min="NUM" max="NUM">	  -> Cria uma área para escrever um número
+		<input type="range" name="NOME" min="NUM" max="NUM">	  -> Cria um slider com o intervalo determinado
+		<input type="tel" name="NOME">							  -> Cria uma área para escrever um número de telefone
+		<input type="email" name="NOME">						  -> Cria uma área para escrever um email
+		<input type="submit" value="TEXTO">						  -> Cria um botão para enviar as informações
+		<input type="reset" value="TEXTO">						  -> Cria um botão para resetar o formulário
+		<select name="NOME" size="NÚMERO">				  		  -> Cria uma caixa de seleção
+			<option value="VALOR"> TEXTO </option>
+			<option value="VALOR" selected> TEXTO </option>
+		</select>
+		<textarea name="NOME"></textarea>						  -> Cria uma área de texto maior
+
+	</form>
+
+	method="GET"  								  		  		  -> Aparece o texto enviado pelo submit no endereço da página
+	method="POST" 								  		  		  -> Esconde o texto enviado pelo submit no endereço da página
+
+	value="VALOR" 										  		  -> É utilizado para diferenciar as tags com o mesmo nome na barra de endereço
+														  		  -> Pode ser utilizado no "submit" e "reset" para mudar o texto do botão
+
+	min=" "													  	  -> É a data / número mínimo que o usuário pode selecionar (ANO-MÊS-DIA) (OPCIONAL)
+	max=" "													  	  -> É a data / número máximo que o usuário pode selecionar (ANO-MÊS-DIA) (OPCIONAL)
+
+	selected / checked											  -> São utilizados para marcarem as tags automaticamente (OPCIONAL)
+
+	</body>
+</html>
